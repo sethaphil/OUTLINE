@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+  transition: 0.25s ease;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #222;
+  background: linear-gradient(135deg, #fdf7f5, #f7f2fc);
+}
+
+.header-container {
+ background-image: url('https://i.pinimg.com/736x/b0/68/33/b0683313c8b1ab75131ce60adb264ee5.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: contain
+}
+
+.logo {
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  border: 4px solid #ff6fb5;
+  box-shadow: 0 8px 20px rgba(255, 111, 181, 0.25);
+  margin: 0 auto 0px;
+  margin-top: 20 auto 20px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.pulse {
+  animation: pulse 2.2s infinite ease-in-out;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+.text-area h2 {
+  font-size: 32px;
+  color: #ff6fb5;
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-area h2:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+.text-area h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #ffbcd8;
+  margin: 10px auto 0;
+  border-radius: 3px;
+}
+
+.text-area p {
+  font-style: italic;
+  font-size: 23px;
+  font-family: 'Cormorant Garamond', serif;
+  border: 1px dashed #bfbaff;
+  border-radius: 6px;
+  width: fit-content;
+  padding: 10px 20px;
+  margin: 0 auto;
+  margin-top: 50px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  line-height: 1.6;
+}
+
+h1, h3 {
+   font-family: 'Cormorant Garamond', serif;
+  color: var(--text-main);
+}
+
+.website-name {
+  border: 2px dashed #aaa;
+  padding: 0px 20px;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+.navigation {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.navigation a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #444;
+  transition: 0.25s;
+}
+.navigation a:hover {
+  color: #ff6fb5;
+  transform: translateY(-3px);
+}
+
+
+.dot {
+  opacity: 0.6;
+  color: #bfbaff;
+}
+
+.menu-button {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.divider {
+  width: 100%;
+  height: 3px;
+  background: #00b4d8;
+  margin-top: 1px;
+}
+
+.content-layout {
+  display: flex;
+  justify-content: center;
+  width: 96%;
+  padding: 35px;
+  gap: 0px;
+}
+
+.fade-in { animation: fadeIn 1.2s ease forwards; opacity:0; }
+.slide-up { animation: slideUp 1.2s ease forwards; opacity:0; }
+
+@keyframes fadeIn { to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(40px); } to { opacity:1; transform: translateY(0); } }
+
+
+@media (max-width: 900px){
+  .content-layout { flex-direction: column; }
+  .image-box { width: 100%; height: 300px; }
+}
+
+@media (max-width: 650px){
+  .navigation { display:none; }
+  .menu-button { display:block; }
+}
+
+body, .website-name, .navigation a, .episode-card, .cta {
+  transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+}
+
+.theme-toggle {
+  margin-top: 29px;
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #ffd1ec;
+  color: #333;
+}
+
+.theme-toggle-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  background: #ff6fb5;
+  color: white;
+}
+
+.dark-mode {
+  background: #121212;
+  color: #f4f4f4;
+}
+
+.dark-mode .header-container {
+  background: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: contain
+}
+
+.dark-mode .logo {
+  border-color: #555;
+}
+
+.dark-mode .website-name {
+  border-color: #555;
+  background: #1e1e1e;
+}
+
+.dark-mode .navigation a {
+  color: #ddd;
+}
+.dark-mode .navigation a:hover {
+  color: #ff9bd6;
+}
+
+.dark-mode .divider {
+  background: #eee;
+}
+
+.dark-mode .image-box {
+  border-color: #555;
+}
+
+.dark-mode .cta {
+  background: #ffd1ec;
+  color: white;
+}
+.dark-mode .cta:hover {
+  background: #ff6fb5;
+}
+
+.dark-mode .episode-card {
+  background: #1e1e1e;
+  border-color: #555;
+}
+
+.dark-mode .dot {
+  color: #ffffff;
+}
+
+.dark-mode h2 {
+  color: #ffffff;
+  
+}
+
+.dark-mode p {
+  color: #ffffff;
+}
